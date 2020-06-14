@@ -130,6 +130,7 @@ public class Generate {
     public class Tile extends StackPane {
         private int x, y;
         private boolean hasMine;
+        private boolean flagged = false;
         private boolean isOpen = false;
         // tworzenie kafelki
         private Rectangle plate = new Rectangle(tileSize - 2, tileSize - 2);
@@ -155,15 +156,18 @@ public class Generate {
             setTranslateY(y * tileSize);
 
             //akcja przycisku myszka
-            setOnMouseClicked(e -> {
-                if (e.getButton() == MouseButton.PRIMARY) {
+          setOnMouseClicked(e -> {
+                if (e.getButton() == MouseButton.PRIMARY && !flagged) {
                     open();
                 } else if (e.getButton() == MouseButton.SECONDARY) {
-                    if (!isOpen)
+                    if (!isOpen) {
                         plate.setFill(Color.RED);
+                        flagged=true;
+                    }
                     if (e.getClickCount() == 2) {
                         if (!isOpen)
                             plate.setFill(Color.GREY);
+                        flagged=false;
                     }
                 }
             });
