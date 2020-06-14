@@ -1,0 +1,20 @@
+.button {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 30px;
+    -fx-background-color: WHITE;
+}
+.button:hover {
+    -fx-text-fill: WHITE;
+    -fx-background-color: BLACK
+}
+.label {
+    -fx-background-color: transparent;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 35px;
+
+}
+
+#root {
+    -fx-background-image: url(mina.jpg);
+    -fx-background-size: 400px 400px;
+}

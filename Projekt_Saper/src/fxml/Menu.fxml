@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="root" prefHeight="368.0" prefWidth="368.0" stylesheets="@../resources/Main.css"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="saper.MenuController">
+    <Button layoutX="130.0" layoutY="92.0" mnemonicParsing="false" onAction="#game" text="PLAY" />
+    <Button layoutX="128.0" layoutY="180.0" mnemonicParsing="false" onAction="#exit" text="EXIT" />
+</AnchorPane>
